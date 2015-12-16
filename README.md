@@ -1,7 +1,8 @@
 A few test cases for Cloudant Java
 --
 
- - Add your Cloudant credentials to cloudant.properties.
+ - Copy cloudant.properties_template to cloudant.properties
+ - Add your Cloudant credentials to cloudant.properties 
  - Create a database with the following document:
 
 ```
