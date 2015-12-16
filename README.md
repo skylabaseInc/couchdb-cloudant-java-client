@@ -57,6 +57,12 @@ A few test cases for Cloudant Java
 }
 ```
 
+ - Run tests:
+ 
+ ```
+ ./gradlew check
+ ```
+
 
 
 
