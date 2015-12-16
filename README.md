@@ -1,8 +1,8 @@
 A few test cases for Cloudant Java
 --
 
- 1. Add your Cloudant credentials to cloudant.properties.
- 2. Create a database with the following document:
+ - Add your Cloudant credentials to cloudant.properties.
+ - Create a database with the following document:
 
 ```
 {
@@ -28,7 +28,7 @@ A few test cases for Cloudant Java
 }
 ```
 
- 3. Create a view:
+ - Create views:
  
  ```
  {
