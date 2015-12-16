@@ -1,2 +1,5 @@
 .gradle/
 build/
+/bin/
+gradle.properties
+cloudant.properties

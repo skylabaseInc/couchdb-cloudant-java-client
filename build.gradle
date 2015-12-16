@@ -1,4 +1,5 @@
-apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'eclipse'
 
 repositories {
     mavenCentral()
@@ -7,8 +8,6 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'com.cloudant:cloudant-client:2.1.0'
-    testCompile 'com.cloudant:cloudant-client:2.1.0'
-    testCompile 'org.codehaus.groovy:groovy-all:2.4.4'
 }
 
 task wrapper(type: Wrapper) {

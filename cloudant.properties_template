@@ -1,0 +1,4 @@
+cloudant_account=changeme
+cloudant_username=changeme
+cloudant_password=changeme
+cloudant_database=changeme
