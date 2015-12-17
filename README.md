@@ -32,27 +32,42 @@ A few test cases for Cloudant Java
  - Create views:
  
  ```
- {
+{
   "_id": "_design/ddoc",
+  "_rev": "12-c8b90da86721e12b647e8bdb9ddf37ab",
   "views": {
     "find-by-product-name": {
       "map": "function (doc) {
-        if (doc.name) {
-            emit(doc.name, null);
-        }
-      }"
+				  if (doc.name) {
+				    emit(doc.name, null);
+				  }
+		}"
     },
     "find-by-store-name": {
       "map": "function (doc) {
-        var shop, price, storename,storeprice;
-        if (doc.name && doc.prices) {
-           for (shop in doc.prices) {
-              storename = doc.prices[shop].storeName;
-              storeprice = doc.prices[shop].price;
-              emit(storename, storeprice);
-           }
-        }
-      }"
+				  var shop, price, storename,storeprice;
+				  if (doc.name && doc.prices) {
+				      for (shop in doc.prices) {
+				          storename = doc.prices[shop].storeName;
+				          storeprice = doc.prices[shop].price;
+				          emit(storename, storeprice);
+				      }
+				  }
+		}"
+    }
+  },
+  "indexes": {
+    "find-by-store-name": {
+      "analyzer": "keyword",
+      "index": "function (doc) {
+			        var shop, price, storename;
+			        if (doc.name && doc.prices) {
+			           for (shop in doc.prices) {
+			              storename = doc.prices[shop].storeName;
+			              index(\"storename\", storename, {\"store\": true});
+			           }
+			        }
+		}"
     }
   }
 }
