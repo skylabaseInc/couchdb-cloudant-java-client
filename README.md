@@ -3,7 +3,7 @@ A few test cases for Cloudant Java
 
  - Copy cloudant.properties_template to cloudant.properties
  - Add your Cloudant credentials to cloudant.properties 
- - Create a database with the following document:
+ - Create a database with the following documents:
 
 ```
 {
@@ -26,6 +26,20 @@ A few test cases for Cloudant Java
       }
     ],
     "rev": null
+}
+
+{
+  "_id": "69",
+  "name": "Beans",
+  "title": "Beans is the name",
+  "description": "Beans is the description",
+  "prices": [
+    {
+      "storeName": "The Health Food Shop",
+      "price": 97
+    }
+  ],
+  "rev": null
 }
 ```
 
