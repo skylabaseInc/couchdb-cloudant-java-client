@@ -19,6 +19,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
 import java.util.List;
 import java.util.Properties;
 
@@ -35,12 +36,12 @@ public class ExampleTest {
 		props.load(new FileInputStream("cloudant.properties"));
 
 		client = ClientBuilder
-				.account(props.getProperty("cloudant_account"))
+				.url(new URL(props.getProperty("cloudant_account")))
 				.username(props.getProperty("cloudant_username"))
 				.password(props.getProperty("cloudant_password"))
 				.build();
 
-		db = client.database(props.getProperty("cloudant_database"), false);
+		db = client.database(props.getProperty("cloudant_database"), true);
 	}
 
 	@After
