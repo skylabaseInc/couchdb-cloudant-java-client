@@ -1,9 +1,10 @@
-A few test cases for Cloudant Java
+A few test cases for Cloudant Java Connecting to CouchDB 2.1.0
 --
 
  - Copy cloudant.properties_template to cloudant.properties
- - Add your Cloudant credentials to cloudant.properties 
- - Create a database with the following documents:
+ - Add your Cloudant credentials to cloudant.properties
+ - Create Database ```cloudant``` in your local CouchDB 
+ - Update the Databse with the following documents:
 
 ```
 {
