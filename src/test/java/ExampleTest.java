@@ -95,6 +95,7 @@ public class ExampleTest {
 		assertEquals(0, list.size());
 	}
 
+	/*
 	@Test
 	public void testFindByStoreName() throws IOException {
 
@@ -145,5 +146,6 @@ public class ExampleTest {
 		assertEquals("Beans",                JsonPath.read(beans,        "$.name"));
 		assertEquals("The Health Food Shop", JsonPath.read(beans,        "$.prices[0].storeName"));
 	}
+	*/
 
 }

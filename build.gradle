@@ -7,7 +7,7 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    testCompile 'com.cloudant:cloudant-client:2.1.0'
+    testCompile 'com.cloudant:cloudant-client:2.9.0'
     testCompile 'commons-beanutils:commons-beanutils:1.9.2'
     testCompile 'com.jayway.jsonpath:json-path:2.1.0'
 }
